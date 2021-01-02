@@ -1,0 +1,31 @@
+{
+  "name": "react-servidor",
+  "version": "1.0.0",
+  "description": "Servidor React",
+  "main": "index.js",
+  "scripts": {
+    "webpack:server": "webpack --config webpack.server.js --watch",
+    "webpack:client": "webpack --config webpack.config.js --watch",
+    "server": "nodemon ./dist/bundle_server.js",
+    "start": "npm-run-all --parallel server webpack:server webpack:*"
+  },
+  "author": "Allan S. Pessin",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "nodemon": "^2.0.6",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
